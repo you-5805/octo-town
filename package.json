@@ -1,5 +1,5 @@
 {
-  "name": "my-next-template",
+  "name": "octo-town",
   "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
