@@ -9,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang='ja'>
-      <body className='bg-stone-100'>{children}</body>
+      <body className='bg-stone-100'>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

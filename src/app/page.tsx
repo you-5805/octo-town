@@ -7,7 +7,11 @@ import Image from 'next/image';
 export default async function Page() {
   const session = await getServerSession(nextAuthOptions);
   if (session === null) {
-    return <SignInButton />;
+    return (
+      <div className='flex min-h-screen items-center justify-center'>
+        <SignInButton />
+      </div>
+    );
   }
 
   const { data: users } = await octokit(
@@ -15,8 +19,10 @@ export default async function Page() {
   ).users.listFollowedByAuthenticatedUser();
 
   return (
-    <main className='p-8'>
-      <SignOutButton />
+    <div className='grid gap-8 p-8'>
+      <div className='text-center'>
+        <SignOutButton />
+      </div>
       <ul className='grid gap-8 sm:grid-cols-2'>
         {users.map((user) => (
           <li
@@ -42,6 +48,6 @@ export default async function Page() {
           </li>
         ))}
       </ul>
-    </main>
+    </div>
   );
 }
