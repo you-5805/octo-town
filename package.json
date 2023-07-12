@@ -14,7 +14,7 @@
     "sb:build": "storybook build"
   },
   "dependencies": {
-    "@octokit/rest": "^19.0.7",
+    "@octokit/rest": "^20.0.0",
     "@t3-oss/env-nextjs": "^0.2.2",
     "classnames": "^2.3.2",
     "next": "^13.3.4",
